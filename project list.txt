@@ -1,0 +1,44 @@
+Highland FRS website - updates as discussed in email
+Highland FRS reports - add IIT tasks, task list as identified, get involved in LinkedIn group for Crystal
+fix-up tresling - finish music programming, fix controller, pad and point controller
+Photography Prints - Create Etsy page, select images to push
+painting - Large scale street-lamp B&W - 3 iterations? Create Etsy page
+painting - Remake green face - easy.
+Daedalus + SqlSiphon - make SqlSiphon manage SP text, start pushing it on web
+Smoking Man - finish vector files, send to NextFab, glue together, show
+Combat & Command game - iterate, draw, market, a lot of work
+Chase Street Books - finish characters, layout, iterate
+Card Game Prototyping System - build to support COmbat & Command
+HTML 5 synthesizer - publish
+Real Synth - research android builds, research ADK, design enclosure, ugh, whatever
+Modular Music Toy - build 2nd prototype, build 3rd prototype, make kickstarter
+JustWriteDammit - rebuild as offline capable HTML 5 app, make store, start collecting data
+painting - Statue of Liberty's tombstone
+Puzzle Library
+JS Puzzle Library
+Puzzle Games
+start a brewery
+Solar Desalinator
+TaskManager
+wedusc.com
+
+
+HTML 5 pinball game
+painting - Robin Hood "3D" composite piece
+painting - Golden Obama logo
+painting - Leprechaun puking rainbow into golden toilet
+painting - Fat woman eating donut while driving SUV
+Hive budget
+Hive membership
+Hive retention
+music video
+BeerCodex.com
+iPad/iPhone/TV game-night
+Multiplayer Asteroids
+HTML 5 battleship
+P2P chat client
+Open Source Meeting Software
+Sheep Song Game
+Turtle Trader
+Hey Neighbor
+philly_mud
