@@ -1,0 +1,1 @@
+players control a flock of sheep, each sheep representing a different note in a song. Players collect songbooks akin to magic spells, with the maximum level of song possible being the number of sheep the player has collected. Songs are used to solve puzzles and defeat monsters.

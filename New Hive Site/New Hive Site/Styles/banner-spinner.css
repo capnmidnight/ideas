@@ -1,0 +1,60 @@
+﻿
+
+div#banner-spinner
+{
+    position: relative;
+    width: 1024px;
+    height: 300px;
+    overflow: hidden;
+}
+div#banner-spinner ul
+{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+div#banner-spinner ul li
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+div#banner-spinner ul li img
+{
+    width: 100%;
+    position: absolute;
+}
+div#banner-spinner ul li div
+{
+    width: 15em;
+    position: absolute;
+    left: 50%;
+    padding: 2em;
+    bottom: 25px;
+    color: White;
+    font-size: 16pt;
+    text-shadow: 2px 2px #999;
+}
+div#banner-spinner ul li div h1
+{
+    text-align:center;
+    font-size: 36pt;
+    margin-bottom: 0.5em;
+}
+div#banner-spinner img#overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+#position-indicator
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 125px;
+    top: 250px;
+}

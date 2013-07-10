@@ -1,0 +1,14 @@
+http://vimeo.com/19712586 - cubelets
+http://www.pknts.com/flash-popups/AMK/ - Alle Meine Klange 
+http://www.q-ba-maze.com/
+http://www.yoshiakai.com/index.html - lego synth
+http://www.modulartoy.com/index/en/5/1
+http://www.percussa.com/?p=demos - AudioCubes
+
+http://www.gamedev.net/topic/488219-collaberative-music-creation/ - Collaberative Music Creation
+
+http://chuck.cs.princeton.edu/ - ChucK music programming language
+http://filter24.org/seq24/about.html - simple MIDI sequencer
+
+
+http://www.falstad.com/circuit/e-555square.html - 555 sim
