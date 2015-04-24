@@ -1,0 +1,887 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hive76</title>
+    <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/wp.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/banner-spinner.css" rel="stylesheet" type="text/css" />
+    <style>
+        body
+        {
+            background-color: white;
+            font-family: helvetica, arial, sans-serif;
+        }
+        #topper
+        {
+            font-size: 10pt;
+            background-color: #ccc;
+            padding: 0.25em;
+            color: white;
+        }
+        #content
+        {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1024px;
+        }
+        a
+        {
+            color: #ff9400;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+        }
+        
+        #tagline
+        {
+            font-size: 2em;
+            text-align: right;
+            padding: 0.5em;
+            padding-right: 1em;
+            background: #ff9400;
+            color: #fff;
+        }
+        
+        #maincontent
+        {
+            position: relative;
+            left: 200px;
+            width: 624px;
+            padding-top: 1em;
+        }
+        
+        #handy-column
+        {
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+        #logo
+        {
+            position: relative;
+            left: -25px;
+        }
+        ul#menu
+        {
+            border: solid 1px #c0c0c0;
+            border-radius: 0.5em;
+            position: relative;
+            top:30px;
+            width: 7em;
+            background-color: #333;
+            font-size: 10pt;
+        }
+        ul#menu li
+        {
+            padding: 1em;
+            border-top: solid 1px #555;
+            border-bottom: solid 1px #000;
+        }
+        #twitter-widget
+        {
+            position:relative;
+            left:-125px;
+            top:100px;
+        }
+    </style>
+    <script type="text/javascript">
+        var images = null;
+        var curImage = -1;
+        var timer = null;
+        window.onload = function () {
+            var banner = document.getElementById("banner-spinner-images");
+            images = banner.getElementsByTagName("li");
+            setImage(0, false);
+        };
+
+        function cycleImage() {
+            setImage(curImage + 1, false);
+        }
+
+        function setImage(i, stopTimer) {
+            if (stopTimer && timer != null)
+                clearTimeout(timer);
+            if (curImage > -1)
+                images[curImage].style.display = "none";
+            curImage = i % images.length;
+            images[curImage].style.display = "block";
+            var pos = document.getElementById("position-indicator");
+            pos.innerHTML = "";
+            for (var i = 0; i < images.length; ++i)
+                pos.innerHTML += "<img src=\"Images/" + (i == curImage ? "on" : "off") + ".png\" onclick=\"setImage(" + i + ", true)\">";
+            timer = setTimeout(cycleImage, 5000);
+        }
+    </script>
+</head>
+<body>
+    <div id="topper">
+        bleh</div>
+    <div id="content">
+        <div id="banner-spinner">
+            <ul id="banner-spinner-images">
+                <li style="display: block">
+                    <img src="Images/20110427_09.jpg" alt="photo">
+                    <div>
+                        <h1>
+                            We Are Makers</h1>
+                        We like to tear things apart and put them together in new ways.
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/PB036012.jpg" alt="photo">
+                    <div>
+                        <h1>
+                            Center City Philadelphia</h1>
+                        Located conveniently at <a href="http://maps.google.com/maps/place?cid=14362595976422766049&amp;q=hive76&amp;gl=us">
+                            915 Spring Garden (Suite 519)</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="Images/2012-01-27%2015.07.05.jpg" alt="photo">
+                    <div>
+                        <h1>
+                            Get to Know Us!</h1>
+                        Read our <a href="http://wiki.hive76.org/">Wiki</a> or <a href="http://www.hive76.org/feed">
+                            RSS feed</a></div>
+                </li>
+                <li>
+                    <img src="Images/3.jpg" alt="photo">
+                    <div>
+                        <h1>
+                            Join us!</h1>
+                        Contribute to the <a href="http://groups.google.com/group/hive76-discussion">discussion
+                            list</a>, or stop by our Open House every Wednesday night!
+                    </div>
+                </li>
+            </ul>
+            <img src="Images/overlay.png" alt="overlay" id="overlay">
+            <div id="position-indicator">
+            </div>
+        </div>
+        <div id="tagline">
+            The Hive: Philadelphia's Premiere Hackerspace!
+        </div>
+        <div id="maincontent" role="main">
+            <div class="postwrap">
+                <div class="post-3655 post type-post status-publish format-standard hentry category-uncategorized"
+                    id="post-3655">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/meet-mitch-altman" rel="bookmark" title="Permanent Link to Meet Mitch Altman!!!!">
+                                    Meet Mitch Altman!!!!</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 06.24.12, In <a href="http://www.hive76.org/category/uncategorized" title="View all posts in Uncategorized"
+                                rel="category tag">Uncategorized</a>, By JackZylkin</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                <a href="http://www.hive76.org/wp-content/uploads/2012/06/mitch2.jpg">
+                                    <img class="size-full wp-image-3659 alignnone" title="mitch2" src="http://www.hive76.org/wp-content/uploads/2012/06/mitch2.jpg"
+                                        alt="" width="500" height="327"></a><br>
+                                Next Friday (July 6), Mitch Altman’s&nbsp;nationwide AMTRAK&nbsp;tour of hackerspaces
+                                rolls&nbsp;into&nbsp;Philadelphia, and Hive76 will be welcoming him in style.&nbsp;Stop
+                                by our space on Friday night for an&nbsp;free lecture and electronics hacking workshop
+                                officiated by Mitch himself.&nbsp;&nbsp;There will be food, drink, merriment, and
+                                of course the opportunity to swap ideas and stories with a living legend in the
+                                DIY community.</p>
+                            <p>
+                                &nbsp;If you haven’t followed Mitch Altman’s career, you probably still know of
+                                some of his very cool projects, like&nbsp;his <a href="http://www.tvbgone.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.tvbgone.com']);">
+                                    TV-B-Gone </a>remote, or&nbsp;his <a href="http://makezine.com/10/brainwave/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://makezine.com']);">
+                                        Brain Machine</a>&nbsp;glasses, and his many cool articles for Make: Magazine.&nbsp;Despite&nbsp;the
+                                great commercial&nbsp;success of&nbsp;his inventions, Mitch helped pioneer the Open-Source
+                                Hardware movement by publicly refusing to patent his ideas, and continues to inspire
+                                the maker community by advocating the free exchange of&nbsp;DIY electronics knowledge.&nbsp;&nbsp;</p>
+                            <p>
+                                Come by on Friday, July 6,&nbsp;as&nbsp;Mitch demos his latest inventions and kits,
+                                and leads a fun&nbsp;hacking&nbsp;workshop&nbsp;suitable for everyone from&nbsp;total
+                                novices to advanced solder-smiths! Its guaranteed to be a great time!</p>
+                            <p>
+                                Date: July 6, 2012<br>
+                                Time: 6:00<br>
+                                Location: Hive76 (915 Spring Garden St.)<br>
+                                Price:&nbsp; ADMISSION IS FREE! (kits for the workshop start around $10)</p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3655&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>1</span> <a href="http://www.hive76.org/meet-mitch-altman#comments" title="View Comments">
+                                Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355477&amp;count=none&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3655&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/meet-mitch-altman#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3650 post type-post status-publish format-standard hentry category-uncategorized"
+                    id="post-3650">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/hackers-on-a-train" rel="bookmark" title="Permanent Link to Hackers on a Train">
+                                    Hackers on a Train</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 06.22.12, In <a href="http://www.hive76.org/category/uncategorized" title="View all posts in Uncategorized"
+                                rel="category tag">Uncategorized</a>, By Sean McBeth</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                Our neighbors at <a href="http://makelehighvalley.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://makelehighvalley.com']);">
+                                    Make Lehigh Valley</a> are hosting Mitch Altman, Jimmie Rodgers, “and crew”
+                                (?) for a day of classes, workshops, and talks over at <a href="http://hive4a.org/"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://hive4a.org']);">
+                                    Hive 4A</a>. <a href="http://makelehighvalley.com/blog/2012/06/hackers-on-a-train-in-the-lehigh-valley-july-5th/"
+                                        onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://makelehighvalley.com']);">
+                                        Hackers on a Train</a> sounds very exciting, and at only $35, it’s probably
+                                one of the cheapest ways you’ll get to meet such popular pirate-makers.</p>
+                            <blockquote>
+                                <p>
+                                    <em>These three hours pack in just about everything you need to explore hobby electronics.
+                                        As a workshop participant, you will learn the basics of Arduino, electronic components
+                                        and how they interact. Then you will be instructed in soldering up&nbsp;<a href="http://www.ladyada.net/make/boarduino/"
+                                            onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.ladyada.net']);">Adafruit’s
+                                            BoArduino kit</a>. Your boarduino will be used to build a TV-B-Gone which will
+                                        include learning to use a USB-to-serial ttl cable, the Arduino IDE, solderless breadboards
+                                        and reading schematics to get their.</em></p>
+                            </blockquote>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3650&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>0</span> <a href="http://www.hive76.org/hackers-on-a-train#comments" title="View Comments">
+                                Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355480&amp;count=none&amp;id=twitter-widget-2&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3650&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/hackers-on-a-train#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3640 post type-post status-publish format-standard hentry category-appropriate-technology"
+                    id="post-3640">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/what-weve-been-up-to" rel="bookmark" title="Permanent Link to What We’ve Been Up To">
+                                    What We’ve Been Up To</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 06.13.12, In <a href="http://www.hive76.org/category/appropriate-technology"
+                                title="View all posts in Appropriate Technology" rel="category tag">Appropriate
+                                Technology</a>, By peej</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                <iframe width="500" height="281" src="http://www.youtube.com/embed/kNFVW9_lB2I?fs=1&amp;feature=oembed"
+                                    frameborder="0" allowfullscreen=""></iframe>
+                            </p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3640&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>0</span> <a href="http://www.hive76.org/what-weve-been-up-to#comments" title="View Comments">
+                                Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355481&amp;count=none&amp;id=twitter-widget-4&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3640&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/what-weve-been-up-to#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3629 post type-post status-publish format-standard hentry category-3d-printing-2 category-arduino category-hardware category-hivebot"
+                    id="post-3629">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/reprap-with-aluminum-extrusions-win" rel="bookmark"
+                                    title="Permanent Link to RepRap with Aluminum Extrusions == WIN">RepRap with Aluminum
+                                    Extrusions == WIN</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 06.07.12, In <a href="http://www.hive76.org/category/3d-printing-2" title="View all posts in 3D Printing"
+                                rel="category tag">3D Printing</a>, <a href="http://www.hive76.org/category/arduino"
+                                    title="View all posts in Arduino" rel="category tag">Arduino</a>, <a href="http://www.hive76.org/category/hardware"
+                                        title="View all posts in Hardware" rel="category tag">Hardware</a>, <a href="http://www.hive76.org/category/hivebot"
+                                            title="View all posts in HiveBot" rel="category tag">HiveBot</a>, By
+                                jmil</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                <a href="http://www.hive76.org/modified-mendelmax-reprap-build-starting-wednesday"
+                                    target="_blank">Last Night</a> We started the build of another one of these
+                                box-modded <a href="http://www.mendelmax.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.mendelmax.com']);"
+                                    target="_blank">MendelMax printers</a>. With extra hands we got the whole frame,
+                                the feet, all the motors, and a large number of brackets mounted and aligned in
+                                just a few hours. Even Morfin was surprised how quickly it all came together.</p>
+                            <p>
+                                <a href="http://www.hive76.org/wp-content/uploads/2012/06/photo-2.jpg">
+                                    <img src="http://www.hive76.org/wp-content/uploads/2012/06/photo-2-300x225.jpg" alt=""
+                                        title="Compact Y-Rod Holders complete" width="300" height="255" class="alignright size-medium wp-image-3630"></a></p>
+                            <p>
+                                This design has already led to the design of the first printable upgrade: <a href="http://www.thingiverse.com/thing:24510"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.thingiverse.com']);"
+                                    target="_blank">Compact Y-Rod holders</a>. As you can see, this part was derived
+                                from MendelMax 1.0, 1.5, and some awesome rod clamps by <a href="http://www.thingiverse.com/jonaskuehling/things"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.thingiverse.com']);"
+                                    target="_blank">Jonas Kuehling</a>.</p>
+                            <p>
+                                Now the build volume actually surpasses a MendelMax, sitting at 265x247x220 mm.
+                                And see how flat those 0.4mm printed layers are? That’s because this aluminum bot
+                                is super rigid, giving fast and accurate prints. Sweet!</p>
+                            <p>
+                                If you can come up with a good name for this bot, I’d definitely appreciate it.
+                                Post in the comments if you feel inspired.</p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3629&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>1</span> <a href="http://www.hive76.org/reprap-with-aluminum-extrusions-win#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355482&amp;count=none&amp;id=twitter-widget-6&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3629&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/reprap-with-aluminum-extrusions-win#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3620 post type-post status-publish format-standard hentry category-3d-printing-2 category-arduino category-hivebot category-instructionals"
+                    id="post-3620">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/modified-mendelmax-reprap-build-starting-wednesday"
+                                    rel="bookmark" title="Permanent Link to Modified MendelMax RepRap Build starting Wednesday">
+                                    Modified MendelMax RepRap Build starting Wednesday</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 06.04.12, In <a href="http://www.hive76.org/category/3d-printing-2" title="View all posts in 3D Printing"
+                                rel="category tag">3D Printing</a>, <a href="http://www.hive76.org/category/arduino"
+                                    title="View all posts in Arduino" rel="category tag">Arduino</a>, <a href="http://www.hive76.org/category/hivebot"
+                                        title="View all posts in HiveBot" rel="category tag">HiveBot</a>, <a href="http://www.hive76.org/category/instructionals"
+                                            title="View all posts in Instructionals" rel="category tag">Instructionals</a>,
+                                By jmil</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                <a href="http://www.hive76.org/wp-content/uploads/2012/06/jmil_modifiedMendelMax_BoxDesign_v2.png">
+                                    <img src="http://www.hive76.org/wp-content/uploads/2012/06/jmil_modifiedMendelMax_BoxDesign_v2-300x225.png"
+                                        alt="" title="Modified MendelMax 1.5, Box design" width="300" height="225" class="alignright size-medium wp-image-3621"></a></p>
+                            <p>
+                                Did you take <a href="http://www.hive76.org/intro-to-programming-with-arduino" target="_blank">
+                                    Peejay’s Intro to Programming with Arduino class</a>? You may have learned that
+                                Arduino’s are great for controlling 3D printers such as a <a href="http://www.reprap.org/"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.reprap.org']);"
+                                    target="_blank">RepRap</a>.</p>
+                            <p>
+                                Well, hot on the heels of <a href="http://www.hive76.org/timelapse-building-a-reprap-mendelmax-3d-printer"
+                                    target="_blank">our last RepRap MendelMax Build</a>, I’ve been able to redesign
+                                the MendelMax to be a rigid rectangle… the upshot is the build volume is increased
+                                (especially in Z) without the footprint increasing. The build volume of this baby
+                                is 265x233x190 mm (or ~10″x9″x7.5″). The build assembly goes much faster, too.</p>
+                            <p>
+                                Come on by Hive76 starting this Wednesday night to see or help put together another
+                                one. If you’ve been wondering about <a href="http://3dprinterbuildingworkshop.eventbrite.com/"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://3dprinterbuildingworkshop.eventbrite.com']);"
+                                    target="_blank">our upcoming 3D Printer Build and Operation Workshop with NextFab
+                                    Studio</a>, this is a great way to see what the fuss is all about.
+                            </p>
+                            <p>
+                                Here’s a video of this box design Modified MendelMax printer on it’s first print.
+                                It’s been chugging along for a solid few days now, no problems so far. It’s printing
+                                so well, it’s time to build another one. Come join us!</p>
+                            <p>
+                                <iframe width="560" height="315" src="http://www.youtube.com/embed/-gfUwu2rlyo" frameborder="0"
+                                    allowfullscreen=""></iframe>
+                            </p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3620&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>2</span> <a href="http://www.hive76.org/modified-mendelmax-reprap-build-starting-wednesday#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355483&amp;count=none&amp;id=twitter-widget-8&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3620&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/modified-mendelmax-reprap-build-starting-wednesday#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3614 post type-post status-publish format-standard hentry category-arduino category-classes"
+                    id="post-3614">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/intro-to-programming-with-arduino" rel="bookmark"
+                                    title="Permanent Link to Intro to Programming with Arduino">Intro to Programming
+                                    with Arduino</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 05.22.12, In <a href="http://www.hive76.org/category/arduino" title="View all posts in Arduino"
+                                rel="category tag">Arduino</a>, <a href="http://www.hive76.org/category/classes"
+                                    title="View all posts in Classes" rel="category tag">Classes</a>, By peej</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                OMG, we’re having a class!</p>
+                            <p>
+                                You may have heard of the <a href="http://arduino.cc/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://arduino.cc']);">
+                                    Arduino</a> microcontroller before, but if not, we’re here to tell you all about
+                                it! This class will be geared towards those that have no experience with programming,
+                                microcontrollers, electronics, or even hackerspaces! Rest assured that those with
+                                some deeper digging questions will have knowledgeable members of Hive76 on hand
+                                to answer them.</p>
+                            <p>
+                                With the purchase of a ticket, you will get 12 hours of instruction spread over
+                                4 class sessions (that’s 4 three-hour sessions) and an Arduino “starter kit” of
+                                parts. You have the option of bringing your own Arduino ($55), if you have one,
+                                or choosing the package that comes with the Arduino ($75).</p>
+                            <p>
+                                Sessions start on June 3rd and continue each Sunday, through June 24th. Class times
+                                are 1PM-4PM. Students must bring a laptop with a USB port (Windows, Linux, OS X),
+                                and a willingness to have fun.</p>
+                            <p>
+                                <strong>Tickets can be purchased</strong> <a href="http://hive76.ticketleap.com/arduino101/"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://hive76.ticketleap.com']);">
+                                    here</a>. To clarify, students only need to purchase one ticket to attend all
+                                four classes.</p>
+                            <p>
+                                <strong>Seating is limited to only 10 students! Tickets are expected to go VERY fast!</strong></p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3614&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>4</span> <a href="http://www.hive76.org/intro-to-programming-with-arduino#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355484&amp;count=none&amp;id=twitter-widget-10&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3614&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/intro-to-programming-with-arduino#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3608 post type-post status-publish format-standard hentry category-uncategorized"
+                    id="post-3608">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/sunday-wargame-wrapup" rel="bookmark" title="Permanent Link to Sunday Wargame Wrapup">
+                                    Sunday Wargame Wrapup</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 05.20.12, In <a href="http://www.hive76.org/category/uncategorized" title="View all posts in Uncategorized"
+                                rel="category tag">Uncategorized</a>, By Daniel Toliaferro</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                Well the dust has settled, and one winner has emerged. Out of all 5 players, only
+                                Steve Mandelbaum owned the box, and in under 2 hours. Players had to first identify
+                                the target server by scanning for available hosts and then using nmap to enumerate
+                                services. Then players had a choice between brute forcing the ssh service, or grabbing
+                                the passwd and shadow files from the anonymous FTP service, the latter resulting
+                                in a faster crack. After that, players needed to find the administrator of the system
+                                and use sudo to read the full passwd and shadow files. Finally, the root user could
+                                be cracked and full access would be granted.</p>
+                            <p>
+                                We all had a good time, and I can’t wait for the next challenge!</p>
+                            <p>
+                                S4 is meeting for the first time on June 10th at 6 PM, where we’ll be taking a look
+                                at a simple penetration test scenario.</p>
+                            <p>
+                                Hope to see you there!</p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3608&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>2</span> <a href="http://www.hive76.org/sunday-wargame-wrapup#comments" title="View Comments">
+                                Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355485&amp;count=none&amp;id=twitter-widget-12&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3608&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/sunday-wargame-wrapup#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3604 post type-post status-publish format-standard hentry category-events category-games category-hackers category-linux"
+                    id="post-3604">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/pentesting-wargame-on-sunday" rel="bookmark" title="Permanent Link to Pentesting Wargame On Sunday">
+                                    Pentesting Wargame On Sunday</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 05.16.12, In <a href="http://www.hive76.org/category/events" title="View all posts in Events"
+                                rel="category tag">Events</a>, <a href="http://www.hive76.org/category/games" title="View all posts in Games"
+                                    rel="category tag">Games</a>, <a href="http://www.hive76.org/category/hackers" title="View all posts in Hackers"
+                                        rel="category tag">Hackers</a>, <a href="http://www.hive76.org/category/linux" title="View all posts in Linux"
+                                            rel="category tag">Linux</a>, By Daniel Toliaferro</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                Sunday, May 20th at 6 PM we’re hosting a pentesting wargame. Players will learn
+                                how to use common security tools such as <a href="http://www.foofus.net/~jmk/medusa/medusa.html"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.foofus.net']);">
+                                    Medusa</a>, and <a href="http://www.openwall.com/john/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.openwall.com']);">
+                                        John the Ripper</a>, and identify server misconfigurations and administrative
+                                carelessness.</p>
+                            <p>
+                                Come and join in on the fun! Bring a laptop!</p>
+                            <p>
+                                &nbsp;</p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3604&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>4</span> <a href="http://www.hive76.org/pentesting-wargame-on-sunday#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355486&amp;count=none&amp;id=twitter-widget-14&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3604&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/pentesting-wargame-on-sunday#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3599 post type-post status-publish format-standard hentry category-events category-hackers category-linux category-philadelphia category-presentation category-study-groups"
+                    id="post-3599">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/announcing-new-security-group" rel="bookmark" title="Permanent Link to Announcing New Security Group">
+                                    Announcing New Security Group</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 05.09.12, In <a href="http://www.hive76.org/category/events" title="View all posts in Events"
+                                rel="category tag">Events</a>, <a href="http://www.hive76.org/category/hackers" title="View all posts in Hackers"
+                                    rel="category tag">Hackers</a>, <a href="http://www.hive76.org/category/linux" title="View all posts in Linux"
+                                        rel="category tag">Linux</a>, <a href="http://www.hive76.org/category/philadelphia"
+                                            title="View all posts in Philadelphia" rel="category tag">Philadelphia</a>,
+                                <a href="http://www.hive76.org/category/presentation" title="View all posts in Presentation"
+                                    rel="category tag">Presentation</a>, <a href="http://www.hive76.org/category/study-groups"
+                                        title="View all posts in Study Groups" rel="category tag">Study Groups</a>,
+                                By Daniel Toliaferro</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                We’re starting a new group at Hive 76 called “Scheduled Sunday Security Sessions”
+                                (an homage to PJ Santoro’s Monthly Monday Microcontroller Madness). S4 will focus
+                                on computer and electronic security. We’ll have demos and presentations on security
+                                related topics, as well as group penetration testing challenges each month.</p>
+                            <p>
+                                The first meeting will be on June 10th, at 6 PM.</p>
+                            <p>
+                                See you there!</p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3599&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>0</span> <a href="http://www.hive76.org/announcing-new-security-group#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355487&amp;count=none&amp;id=twitter-widget-16&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3599&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/announcing-new-security-group#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="postwrap">
+                <div class="post-3589 post type-post status-publish format-standard hentry category-instructionals category-study-groups category-theory"
+                    id="post-3589">
+                    <div class="hl">
+                    </div>
+                    <div class="copy fix">
+                        <div class="post-title">
+                            <h2>
+                                <a href="http://www.hive76.org/stanford-u-machine-learning-study-group" rel="bookmark"
+                                    title="Permanent Link to Stanford U Machine Learning Study Group">Stanford U Machine
+                                    Learning Study Group</a></h2>
+                        </div>
+                        <!--/post-title -->
+                        <div class="post-date">
+                            <em>On 05.01.12, In <a href="http://www.hive76.org/category/instructionals" title="View all posts in Instructionals"
+                                rel="category tag">Instructionals</a>, <a href="http://www.hive76.org/category/study-groups"
+                                    title="View all posts in Study Groups" rel="category tag">Study Groups</a>,
+                                <a href="http://www.hive76.org/category/theory" title="View all posts in Theory"
+                                    rel="category tag">Theory</a>, By peej</em></div>
+                    </div>
+                    <div class="copy">
+                        <div class="post-content">
+                            <p>
+                                Standford University is at it again with another round of free (as in beer) courses!
+                                This time they’re joined by the likes of Princeton, Penn, and the University of
+                                Michigan!</p>
+                            <p>
+                                Why should you care? Well, Hive76 is forming a study group to help individuals tackle
+                                this incredible and challenging opportunity to be found within <a href="https://class.coursera.org/ml/auth/welcome"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://class.coursera.org']);">
+                                    Standford’s Machine Learning course</a>, of course! Our first meeting will be
+                                held <strong>tomorrow night during Open House Hours (7-11 PM)</strong>! If you are
+                                interested in taking this course, please take the time to register with Stanford
+                                at the link provided <a href="https://class.coursera.org/ml/auth/welcome" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://class.coursera.org']);">
+                                    here</a>.</p>
+                            <p>
+                                As a place to get started, Mike S. of the <a href="https://www.noisebridge.net/wiki/Noisebridge"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.noisebridge.net']);">
+                                    Noisebridge</a> hackerspace in San Francisco, has compiled <a href="https://www.noisebridge.net/wiki/Machine_Learning"
+                                        onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.noisebridge.net']);">
+                                        an excellent list of resources</a> for the study group that they have going
+                                on the left coast. Do consider joining their <a href="https://www.noisebridge.net/mailman/listinfo/ml"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.noisebridge.net']);">
+                                    ML-specific mailing list</a>!</p>
+                            <p>
+                                Folks considering this course should be familiar with programming concepts and linear
+                                algebra, for sure! Recommended linear algebra lectures can be found <a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"
+                                    onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://ocw.mit.edu']);">
+                                    here</a>, and for your open source alternative to <a href="http://www.mathworks.com/products/matlab/"
+                                        onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.mathworks.com']);">
+                                        MATLAB</a>, check out <a href="http://www.gnu.org/software/octave/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.gnu.org']);">
+                                            GNU’s Octave</a>.</p>
+                            <p>
+                                <strong><em>See you tomorrow!</em></strong></p>
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3589&amp;action=edit"
+                                title="Edit Post">Edit Post</a>
+                        </div>
+                        <div class="tags">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="post-footer pfooterlight">
+                        <div class="left">
+                            <span>0</span> <a href="http://www.hive76.org/stanford-u-machine-learning-study-group#comments"
+                                title="View Comments">Comments</a>&nbsp;&nbsp;
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1340179658.html#_=1340818355488&amp;count=none&amp;id=twitter-widget-18&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.hive76.org%2F&amp;size=m&amp;text=Hive%2076&amp;url=http%3A%2F%2Fwww.hive76.org%2F&amp;via=hive76"
+                                class="twitter-share-button twitter-count-none" style="width: 59px; height: 20px;"
+                                title="Twitter Tweet Button"></iframe>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </div>
+                        <div class="right">
+                            <a class="post-edit-link" href="http://www.hive76.org/wp-admin/post.php?post=3589&amp;action=edit"
+                                title="Edit Post">Edit Post</a> | <span><a href="http://www.hive76.org/stanford-u-machine-learning-study-group#respond"
+                                    title="Leave A Response">Leave A Response</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!--post -->
+            </div>
+            <div class="page-nav fix">
+                <span class="previous-entries"><a href="http://www.hive76.org/page/2">« Previous Entries</a></span>
+                <span class="next-entries"></span>
+            </div>
+            <!-- page nav -->
+        </div>
+        <div id="handy-column">
+            <img src="Images/logo.png" id="logo" alt="logo">
+            <ul id="menu">
+                <li style="border-top: none;"><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="calendar.html">calendar</a></li>
+                <li><a href="membership.html">membership info</a></li>
+                <li><a href="wiki.html">wiki</a></li>
+                <li><a href="irc.html">irc</a></li>
+                <li><a href="store.html">store</a></li>
+                <li style="border-bottom: none;"><a href="code.html">code</a></li>
+            </ul>
+            <div id="twitter-widget">
+                <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                <script>
+                    new TWTR.Widget({
+                        version: 2,
+                        type: 'profile',
+                        rpp: 6,
+                        interval: 30000,
+                        width: 250,
+                        height: 300,
+                        theme: {
+                            shell: {
+                                background: '#ff9500',
+                                color: '#ffffff'
+                            },
+                            tweets: {
+                                background: '#ffffff',
+                                color: '#000000',
+                                links: '#ff9500'
+                            }
+                        },
+                        features: {
+                            scrollbar: true,
+                            loop: false,
+                            live: true,
+                            behavior: 'all'
+                        }
+                    }).render().setUser('hive76').start();
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

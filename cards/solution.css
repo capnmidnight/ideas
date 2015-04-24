@@ -1,0 +1,13 @@
+.solution{
+	background-color:#7fff7f;
+	border-color:#003f00;
+}
+.solution h2{
+	color:#003f00;
+}
+.solution h1, .solution .score{
+	color:#000000;
+}
+.solution .icon{
+	background-image:url("ico3.png");
+}

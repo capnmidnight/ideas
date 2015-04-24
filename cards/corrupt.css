@@ -1,0 +1,13 @@
+.corrupt{
+	background-color:#ff7f7f;
+	border-color:red;
+}
+.corrupt h2{
+	color:#7f0000;
+}
+.corrupt h1, .corrupt .score{
+	color:white;
+}
+.corrupt .icon{
+	background-image:url("ico1.png");
+}

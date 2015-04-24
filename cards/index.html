@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="card.css">
+	<link rel="stylesheet" type="text/css" href="issue.css">
+	<link rel="stylesheet" type="text/css" href="solution.css">
+	<link rel="stylesheet" type="text/css" href="corrupt.css">
+	<style type="text/css">
+	#c1{
+		-webkit-transform:rotate(45deg);
+	}
+	#c3{
+		-webkit-transform:rotate(-45deg);
+	}
+	</style>
+	<script type="text/javascript" src="card.js"></script>
+	<script type="text/javascript">
+function load()
+{
+	var clicked = null;
+	var x1, x2, y1, y2;
+	x1 = x2 = y1 = y2 = 0;
+	document.addEventListener("mousedown", function(event)
+	{
+		clicked = event.target;
+		x1 = clicked.offsetLeft;
+		y1 = clicked.offsetTop;
+		x2 = event.clientX;
+		y2 = event.clientY;
+		event.preventDefault();
+	}, true);
+	document.addEventListener("mouseup", function(event)
+	{
+		clicked = null;
+		event.preventDefault()
+	;}, true);
+	document.addEventListener("mousemove", function(event)
+	{
+		if(clicked != null)
+		{
+			clicked.style.top = (y1 + event.clientY - y2) + "px";
+			clicked.style.left = (x1 + event.clientX - x2) + "px";
+		}
+		event.preventDefault();
+	}, true);
+	
+	card.makeAllCards();
+}
+</script>
+</head>
+<body onload="load()">
+ 	<div class="card" id="c1">
+		"type":"Issue",
+		"title":"No Middle Class",
+		"user":"sean",
+		"date":"12/14/2011 00:01:44 EST",
+		"description":"Through a system of ever increasing debt reliance and savings destruction, the middle class has been all but destroyed, leaving behind an entire workforce of people living paycheck to paycheck, near bankruptcy."
+	</div>
+   <div class="card" id="c2">
+		"type":"Corruption",
+		"title":"Ghost Writer",
+		"user":"sean",
+		"date":"12/13/2011 23:58:34 EST",
+		"description":"To counter proposals for greater regulation, industry leaders bribe political leaders to allow industry to write legislation proposals. Industry uses regulation to erect barriers to entry for their competitors and artificially protect the market for themselves."
+	</div>
+	<div class="card" id="c3">
+		"type":"Solution",
+		"title":"Fight Club",
+		"user":"sean",
+		"date":"12/14/2011 01:16:17 EST",
+		"description":"Stop playing the game and find your own way"
+	</div>
+</body>
+</html>

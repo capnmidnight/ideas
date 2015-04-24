@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="card.css">
+	<link rel="stylesheet" type="text/css" href="combat.css">
+	<link rel="stylesheet" type="text/css" href="command.css">
+	<style type="text/css">
+	#knock{
+		-webkit-transform:rotate(90deg);
+	}
+	</style>
+	<script type="text/javascript" src="combat.js"></script>
+	<script type="text/javascript">
+function load()
+{
+	var clicked = null;
+	var x1, x2, y1, y2;
+	x1 = x2 = y1 = y2 = 0;
+	document.addEventListener("mousedown", function(event)
+	{
+		clicked = event.target;
+		x1 = clicked.offsetLeft;
+		y1 = clicked.offsetTop;
+		x2 = event.clientX;
+		y2 = event.clientY;
+		event.preventDefault();
+	}, true);
+	document.addEventListener("mouseup", function(event)
+	{
+		clicked = null;
+		event.preventDefault()
+	;}, true);
+	document.addEventListener("mousemove", function(event)
+	{
+		if(clicked != null)
+		{
+			clicked.style.top = (y1 + event.clientY - y2) + "px";
+			clicked.style.left = (x1 + event.clientX - x2) + "px";
+		}
+		event.preventDefault();
+	}, true);
+	
+	card.makeAllCards();
+}
+</script>
+</head>
+<body onload="load()">
+ 	<div class="card" id="c1">
+		"type":"Combat L1",
+		"title":"Rifleman",
+		"atk":1,
+		"def":1,
+		"lvl":1
+	</div>
+   <div class="card" id="c2">
+		"type":"Combat L2",
+		"title":"Grenadier",
+		"atk":3,
+		"def":1,
+		"lvl":2
+	</div>
+	<div class="card" id="c3">
+		"type":"Combat L2",
+		"title":"Light Machine Gunner",
+		"atk":2,
+		"def":2,
+		"lvl":2
+	</div>
+	<div class="card" id="c4">
+		"type":"Combat L3",
+		"title":"Anti-tank",
+		"atk":5,
+		"def":3,
+		"lvl":3
+	</div>
+	<div class="card" id="c5">
+		"type":"Combat L3",
+		"title":"Grenade Launcher",
+		"atk":4,
+		"def":4,
+		"lvl":3,
+		"description":""
+	</div>
+	<div class="card" id="c6">
+		"type":"Combat L3",
+		"title":"Marksman",
+		"atk":3,
+		"def":5,
+		"lvl":3
+	</div>
+</body>
+</html>

@@ -42,3 +42,4 @@ Sheep Song Game
 Turtle Trader
 Hey Neighbor
 philly_mud
+Sock - a library for encoding social interactions. Text, images, audio, video. Local-store, cloud, vendor-specific persistence.

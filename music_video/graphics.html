@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aaaaaaaaaah!</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="user-scalable=no, width=device-width">
+		<script type="text/javascript">
+function load()
+{
+	var width = 800;
+	var height = 600;
+	var left = 0;
+	var top = 0;
+
+	function touchMove(evt)
+	{
+		if(evt.touches.length > 0)
+		{
+			mx = evt.touches[0].pageX;
+			my = evt.touches[0].pageY;
+		}
+		evt.preventDefault();
+	}
+	function mouseMove(evt)
+	{
+		mx = evt.clientX - left;
+		my = evt.clientY - top;
+	}
+	function createLayer(canv, flag)
+	{
+		canv.width = width;
+		canv.height = height;
+		canv.style.width = width + "px";
+		canv.style.height = height + "px";
+		canv.style.position = "absolute";
+		canv.style.left = left + "px";
+		canv.style.top = top + "px";
+		canv.style.backgroundImage = "url(bg.jpg)";
+		canv.style.zIndex = 1;
+		
+		if(navigator.userAgent.indexOf("iPad") != -1
+			|| navigator.userAgent.indexOf("iPod") != -1
+			|| navigator.userAgent.indexOf("iPhone") != -1
+			|| navigator.userAgent.indexOf("Android") != -1)
+		{
+			console.log("is iOS");
+			document.addEventListener("touchmove", touchMove); 
+		}
+		else
+		{
+			console.log("isn't iOS");
+			document.addEventListener("mousemove", mouseMove);
+		}
+		document.body.appendChild(canv);
+		return canv.getContext("2d");
+	}
+	var canvas = document.createElement("canvas");
+	var context = createLayer(canvas);
+	var mx = 0;
+	var my = 0;
+	var ready = false;
+	var image = new Array(3);
+	var loadedImages = 0;
+	var imgReady = false;
+	var isReady = function()
+	{
+		loadedImages ++;
+		if (loadedImages == 5)
+		{
+			imgReady = true;
+		}
+	};
+
+	for(var i = 0; i < 3; ++i)
+	{
+		image[i] = new Image();
+		image[i].src = "brush" + i + ".png";
+		image[i].onload = isReady;
+	}
+
+	var bg = new Image();
+	bg.src = "bg.jpg";
+	bg.onload = isReady;
+
+	var music = document.getElementById("m");
+	if(navigator.userAgent.indexOf("Firefox") != -1
+		|| navigator.userAgent.indexOf("Opera") != -1)
+	{
+		console.log("is Firefox or Opera");	
+		music.src = "menu.ogg";
+	}
+	music.addEventListener("playing", isReady);
+
+	document.addEventListener("keypress", function()
+	{
+		if(event.keyCode == 91)
+			steps--;
+		else if(event.keyCode == 93)
+			steps++;
+		else if(event.keyCode == 97)
+			dist--;
+		else if(event.keyCode == 113)
+			dist++;
+		else if(event.keyCode == 115)
+			fx--;
+		else if(event.keyCode == 119)
+			fx++;
+	});
+
+	var steps = 4;
+	var dist = 1;
+	var imageData = null;
+	var fx = 2;
+	var speed = 5;
+	var r = 75;
+	var t, lx, ly, startt, lastt, beat;
+	t = lx = ly = beat = 0;
+	var bpm = 109;
+	var mspb = 60000 / bpm;
+	startt = lastt = Date.now() - 15;
+	function draw()
+	{
+		var nowt = Date.now();
+		if(imgReady)
+		{
+			context.globalCompositeOperation = "copy";
+			context.drawImage(canvas, -fx, 0);
+			context.clearRect(width - fx, 0, fx, height);
+			context.globalCompositeOperation = "source-over";
+			var dx = mx - lx;
+			var dy = my - ly;
+			var d = Math.sqrt(dx * dx + dy * dy);
+
+			var songt = Date.now() - startt;
+			var ds = (songt > mspb * beat) ? 2 : 0;
+			if(ds > 0)
+				beat ++;
+			if(d > 0)
+			{
+				for(var n = 0; n < 3; ++n)
+				{
+					var a = (t * 6 + n * 120) % 360 * 3.14 / 180;
+			        var s = ds + 0.75 + Math.cos((t + n) / 15) * 0.25;
+					context.drawImage(image[n], lx + Math.cos(a) * r - image[n].width * s / 2, ly + Math.sin(a) * r - image[n].height * s / 2, image[n].width * s, image[n].height * s);
+				}
+				lx += dx * speed / d;
+				ly += dy * speed / d;
+			}
+		}
+		lx -= fx;
+		
+		++t;
+		var framet = Date.now() - nowt;
+		lastt = nowt;
+		setTimeout(draw, Math.max(1, 15 - framet));
+	};
+	draw();
+}
+function play()
+{
+	document.getElementById("b").style.display = "none";
+	document.getElementById("m").play();
+}
+		</script>
+		<style type="text/css">
+#g{
+	position:absolute;
+	cursor: url(blank.png);
+}
+#debug{
+	font-family:monospace;
+	color:#00ff00;
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:300px;
+}
+body{
+	padding:0;
+	margin:0;
+	background-color:#000000;
+}
+		</style>
+	</head>
+	<body onload="load()">
+		<audio id="m" src="menu.mp3"></audio>
+		<button id="b" onclick="play()" style="position:absolute;z-index:2;left:100px;top:100px;">play</button>
+	</body>
+</html>

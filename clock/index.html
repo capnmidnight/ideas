@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I'm a Clock!</title>
+
+    <script type="text/javascript">
+function load()
+{
+	var canvas = document.getElementById("g");
+	var loadingBar = document.getElementById("loadingBar")
+	var loadingBarTop = document.getElementById("loadingBarTop");
+	var width = 0;
+	var height = 0;
+	var context = null;	
+	var image = new Array(7);
+	var loadedImages = 0;
+	var clockX, clockY;
+	var imgReady = false;
+
+	function setup(canv)
+	{
+		canv.width = width;
+		canv.height = height;
+		canv.style.width = width + "px";
+		canv.style.height = height + "px";
+		return canv.getContext("2d");
+	}
+	
+	var isReady = function()
+	{
+		loadedImages ++;
+		loadingBarTop.style.width = loadedImages * 100 / image.length + "%";
+		if(loadedImages == image.length)
+		{
+		    width = image[0].width;
+		    height = image[0].height;
+		    clockX = width / 2;
+		    clockY = height / 2;
+		    context = setup(canvas);
+		    loadingBarTop.innerText = "Done!";
+		    setTimeout(function()
+		    {
+		        loadingBar.style.display = "none";
+		    }, 2000);
+		    imgReady = true;
+		}
+	};
+	
+	for(var i = 0; i < image.length; ++i)
+	{
+		image[i] = new Image();
+		image[i].src = "clock" + i + ".png";
+		image[i].onload = isReady;
+	}
+	
+	function drawLayer(value, range, i)
+	{
+	    context.save();
+	    context.rotate(value * 3.14 / (range / 2));
+	    context.drawImage(image[i], -clockX, -clockY);
+	    context.restore();
+	    context.drawImage(image[i + 1], -clockX, -clockY);
+	}
+	
+	function draw()
+	{
+		if(imgReady)
+		{
+            		var time = new Date();
+            		var hour = time.getHours();
+           		var minute = time.getMinutes();
+           		var second = time.getSeconds();
+            		var millis = time.getMilliseconds();
+            
+         	   	context.clearRect(0, 0, width, height);
+			context.save();
+			context.translate(clockX, clockY);
+			context.drawImage(image[0], -clockX, -clockY); // back
+			drawLayer(hour * 3600 + minute * 60 + second, 43200, 1);
+			drawLayer(minute * 60000 + second * 1000 + millis, 3600000, 3);
+			drawLayer(second * 1000 + millis, 60000, 5);
+			context.restore();
+		}
+	};
+
+	setInterval(draw, 33);
+}
+		</script>
+
+    <style type="text/css">
+        #g
+        {
+            position: relative;
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        body
+        {
+            padding: 0;
+            margin: 0;
+            background-color: #c0c0c0;
+        }
+        #loadingBar
+        {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 450px;
+        }
+        .loadingBarInner
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            font-family: Gill Sans, Sans-Serif;
+            color: #ffffff;
+        }
+        #loadingBarBottom
+        {
+            width: 100%;
+        }
+        #loadingBarTop
+        {
+            background-color: orange;
+            overflow: hidden;
+            width: 0;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <div id="loadingBar">
+        <div id="loadingBarBottom" class="loadingBarInner">
+            loading...</div>
+        <div id="loadingBarTop" class="loadingBarInner">
+            loading...</div>
+    </div>
+    <canvas id="g" width="600" height="600">
+		</canvas>
+	<div style="position:absolute;font-family:Gill Sans;font-size:smaller;color:#808080;bottom:0px;right:0px;margin:1em">copyright Sean T. McBeth 2011</div>
+</body>
+</html>

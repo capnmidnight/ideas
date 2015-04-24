@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <script type="text/javascript" src="wav.js"></script>
+	    <script type="text/javascript" src="audio.js"></script> 
+		<script type="text/javascript" src="ui.js"></script>		</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+	<body onload="load()">
+		<!-- it takes time for the audio element to load the file and play it, so we double buffer the sound so there is no delay between them. -->
+		<div id="synthPanel">
+			<div id="controlPanel">
+				<h1 style="font-variant:small-caps">JayOscillator</h1>
+				<h2>An HTML 5+JavaScript Audio Synth</h2>
+				<div class="control">
+					<i>Press space bar to play</i>
+				</div>
+				<br></br>
+				<div class="control">
+					<div class="lcd" id="note"></div>
+					Current Notes
+				</div>
+				<div class="control">
+					<div class="lcd" id="bpm"></div> BPM (Q/A)
+				</div>
+				<div class="control">
+					<div class="lcd" id="power"></div> Power (W/S)
+				</div>
+				<div class="control">
+					<div class="lcd" id="volume"></div> Volume (E/D)
+				</div>
+				<div class="control">
+					<div class="lcd" id="samplen"></div> Sample Length (R/F)
+				</div>
+				<div class="control">
+					<div class="lcd" id="fadeFactor"></div> Fade Factor (T/G)
+				</div>
+				<div class="control">
+					<div class="lcd" id="harmonics"></div> Harmonics (Y/H)
+				</div>
+				<div class="control">
+					<div class="lcd" id="harmonicsOffset"></div> Harmonic Offset (U/J)
+				</div>
+				<div class="control">
+					<div class="lcd" id="noteCount"></div> Note Count (I/K)
+				</div>
+			</div>
+			<canvas id="scope" width="1000" height="600"></canvas>
+		</div>
+	</body>
+</html>

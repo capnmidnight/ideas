@@ -1,0 +1,13 @@
+.issue{
+	background-color:#ffff7f;
+	border-color:#8f8f20;
+}
+.issue h2{
+	color:#7f7f00;
+}
+.issue h1, .issue .score{
+	color:#007f7f;
+}
+.issue .icon{	
+	background-image:url("ico2.png");
+}

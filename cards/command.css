@@ -1,0 +1,13 @@
+.command{
+	background-color:#ffff7f;
+	border-color:#8f8f20;
+}
+.command h2{
+	color:#7f7f00;
+}
+.command h1, .command .score{
+	color:#007f7f;
+}
+.command .icon{	
+	background-image:url("ico2.png");
+}

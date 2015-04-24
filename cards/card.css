@@ -1,0 +1,52 @@
+.card:hover{
+	z-index:100;
+}
+.card{
+	border-style:solid;
+	border-width:5px;
+    position:absolute;
+	border-radius:10px;
+	font-family:Candara,Helvetica,sans-serif;
+	font-size:8pt;
+    width:15em;
+    height:20em;
+	padding:1em;
+	padding-left:1.25em;
+	box-shadow:5px 5px 10px 1px rgba(0,0,0,0.25);
+}
+.card .icon{
+	position:absolute;
+	right:0.5em;
+	top:0.5em;
+	width:32px;
+	height:32px;
+	opacity:0.75;
+}
+.card h1{
+	font-size:1.5em;
+	margin:0;
+	font-variant:small-caps;
+	text-decoration:underline;
+}
+
+.card h3{
+	font-size:0.75em;
+	font-style:italic;
+	margin:0;
+	margin-top:1em;
+	margin-bottom:2em;
+}
+.card p{
+	font-size:1em;
+	margin:0;
+	width:100%;
+	clip:rect(0px, 0px, 0px, 0px);
+	overflow-y:auto;
+	text-align:justify;
+}
+.card .score{
+	font-style:italic;
+	font-size:2em;
+	position:absolute;
+	bottom:0.5em;
+}

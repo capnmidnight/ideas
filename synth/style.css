@@ -1,0 +1,53 @@
+#synthPanel{
+	background-image:url("bg.jpg");
+	padding:10px;
+	float:left;
+	border:outset 10px #808080;
+	border-radius:10px;
+	color:white;
+	font-family: Gill Sans, Helvetica, Arial, sans-serif;
+	font-size:8pt;
+    box-shadow: 10px 10px 5px #808080;
+    width:1250px;
+    height:650px;
+}
+				
+#controlPanel{
+	position:absolute;
+	width:210px;
+	color:#ffffff;
+}
+
+#controlPanel H1{
+    text-shadow: 2.5px 2.5px 5px #c0c0c0;
+}
+	
+.control{
+	float:left;
+	clear:left;
+	padding:2px;
+	font-weight:bold;
+}
+
+.lcd{
+    position:relative;
+	margin-right:1em;
+	width:4em;
+	height:1em;
+	background-color:black;
+	color:#00ff00;
+	font-family:Courier, Courier New, fixed;
+	padding: 2px;
+	border: inset 2px #808080;
+	border-radius:2px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	text-align:right;
+}
+	
+#scope{
+    position:absolute;
+    left:225px;
+	border:inset 5px #808080;
+	border-radius: 5px;
+}

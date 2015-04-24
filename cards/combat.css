@@ -1,0 +1,45 @@
+.combat{
+	background-color:#7fff7f;
+	border-color:#208f20;
+	text-shadow:0px 0px 2px white;
+}
+.combat1{
+	background-image:url("soldier2.png");
+}
+.combat2{
+	background-image:url("soldier3.png");
+}
+.combat3{
+	background-image:url("soldier4.png");
+}
+.combat h2{
+	color:#007f00;
+}
+.combat h1, .combat .level{
+	color:#007f00;
+	background-color:#7fff7f;
+}
+
+.combat .stats{
+    top:60px;
+    width:80px;
+    position:relative;
+    font-size:18pt;
+    font-weight:bold;
+    border-radius:5px;
+    border:solid 2px #3f7f3f;
+    background-color:rgba(255, 255, 255, 0.75);
+    padding:5px;
+}
+
+.combat .level{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    font-weight:bold;
+    text-align:right;
+    font-size:24pt;
+}
+.combat .icon{	
+	background-image:url("ico3.png");
+}
